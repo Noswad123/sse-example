@@ -8,7 +8,8 @@ const getEmoji = (number) => {
   const emojis = [
     '\u{1F984}',
     '\u{269B}',
-    '\u{1F52B}'
+    '\u{1F3C0}',
+    '\u{1F911}'
   ]
   return emojis[number % emojis.length]
 }
