@@ -4,9 +4,8 @@ const port = 3000
 
 app.all('/', function (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*')
-  console.log(req)
+  console.log(req.headers)
   next()
 })
 app.use(express.static('public'))
-
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

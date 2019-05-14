@@ -27,12 +27,6 @@ function handler (req, res) {
 
 const app = express()
 app.disable('x-powered-by')
-// app.all('/', function (req, res, next) {
-//   res.header('Access-Control-Allow-Origin', '*')
-//   next()
-// })
-// app.get('http://localhost:3000/', handler)
-
 app.use(express.static('public'))
 app.get('/sse', handler)
 app.listen(port, () => console.log(`listening on port: ${port}`))
