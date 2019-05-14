@@ -2,7 +2,7 @@ const express = require('express')
 
 // where should this go
 // Access-Control-Allow-Origin: *
-
+const port = 8080
 const sendEvent = (res, data) => res.write(`data: ${data.toString()}\n\n`)
 const getEmoji = (number) => {
   const emojis = [
@@ -35,4 +35,4 @@ app.disable('x-powered-by')
 
 app.use(express.static('public'))
 app.get('/sse', handler)
-app.listen(8080)
+app.listen(port, () => console.log(`listening on port: ${port}`))
